@@ -3,6 +3,10 @@ import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
 import { HttpClient } from '@angular/common/http';
 
+import {HomeComponent} from './home/home.component';
+import {RegisterComponent} from './register/register.component';
+import {HeaderComponent} from './header/header.component';
+
 import { AppComponent  } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreatePostComponent } from './create-post/create-post.component';
@@ -19,6 +23,7 @@ import { ProfileRightSideBarComponent } from './profile-right-side-bar/profile-r
 import { ProfileCreatePostComponent } from './profile-create-post/profile-create-post.component';
 import { ProfileMainContentComponent } from './profile-main-content/profile-main-content.component';
 import { UploadImageComponent } from './upload-image/upload-image.component';
+import { LinkComponent } from './link/link.component';
 const routes: Routes = [
 {path:'navbar', component:NavbarComponent},
 {path: 'create-post',component: CreatePostComponent},
@@ -27,7 +32,11 @@ const routes: Routes = [
 {path: 'rightsidebar',component: RightsidebarComponent},
 {path: 'sidebar',component: SidebarComponent},
 {path: 'profile-view',component: ProfileViewComponent},
-
+ {path:'home', component:HomeComponent},
+  {path: 'register',component: RegisterComponent},
+  {path: 'header',component: HeaderComponent},
+  {path: '',component: HomeComponent},
+  {path:"link",component:LinkComponent}
 
 ]
  
@@ -47,7 +56,11 @@ const routes: Routes = [
     ProfileRightSideBarComponent,
     ProfileCreatePostComponent,
     ProfileMainContentComponent,
-    UploadImageComponent
+    UploadImageComponent,
+    HomeComponent,
+    HeaderComponent,
+    RegisterComponent,
+    LinkComponent
   ],
   imports: [
     BrowserModule,
